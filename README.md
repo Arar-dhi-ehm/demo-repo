@@ -1,6 +1,6 @@
-# Demo
+# Django Practice
 
-Some description!
+Source code for Django
 
 ## Subheader
 
@@ -8,4 +8,4 @@ This is a sample text.
 
 ## Local Development
 
-1. Open index.html in your browser
+1. Django development practice
