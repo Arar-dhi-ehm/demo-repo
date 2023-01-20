@@ -15,5 +15,6 @@ class Item(models.Model):
     text = models.CharField(max_length=300)
     complete = models.BooleanField()  # Boolean field is used to know if user have completed the items in todolist or not
 
+    # Without this, we will only get a memory address and not string we wanted. Ex. <ToDoList: Renzo's List>
     def __str__(self) -> str:
         return self.text

@@ -1,14 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import ToDoList, Item
 
-
-# Create your views here. This will serve the http requests.
-
-# Create a function that will create a multiple views
-def index(response):
+# Create a function that will create a multiple views. This will serve the http requests. 
+def index(response, name):
+    # Get an item in todolist using ID
+    ls = ToDoList.objects.get(name=name)
+    item = ls.item_set.get(id=1 )
     # Create a header or text for webpage
-    return HttpResponse('<h1>Hello World!</h1>')
-
-def view_1(response):
-    # Create a header or text for webpage
-    return HttpResponse('<h1>View Number 1!</h1>')
+    return HttpResponse("<h1>%s</h1><br></br><p>%s</p>" % (ls.name, str(item.text))) # %s will get the value of %ls.name
