@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Insert 'sample_app' to tell django the I have an app that needs dependencies inside of the project
+    'sample_app.apps.SampleAppConfig',
 ]
 
 MIDDLEWARE = [
