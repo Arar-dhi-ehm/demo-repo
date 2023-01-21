@@ -5,7 +5,7 @@ from django.db import models
 class ToDoList(models.Model):  # 'models.Model' means create a db object called 'ToDoList'
     name = models.CharField(max_length=200)  # class var 'name' is an attribute of 'ToDoList'. CharField is where we store data.
 
-    # Define a string method to see what it actually look like when printed
+    # Define a string method to see what it actually look like when printed. It returns a string representation of ToDoList object.
     def __str__(self) -> str:
         return self.name
 

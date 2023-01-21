@@ -1,6 +1,7 @@
 from django.urls import path
 
 from . import views  # The '.' means import views from the current directories
+# '.' means (relative import) from the current package or directory. Like Linux cd .. and cd
 
 # Define paths to different webpages 
 urlpatterns = [
