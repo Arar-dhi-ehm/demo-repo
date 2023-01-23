@@ -1,0 +1,18 @@
+<!--This is used to display out To Do List-->
+
+<!--Extend/Inherit from base.html-->
+{% extends 'my_website/base.html' %}
+
+{% block title %}<!--Title of Tab Name-->
+View List
+{% endblock %}
+
+{% block content %}<!--Content of the webpage-->
+    <h1>{{ls.name}}</h1>
+    <ul>
+        <!--Loop through every items and display it in a list form. Insert Python in HTML-->
+        {% for item in ls.item_set.all %}
+            <li>{{item.text}}</li>
+        {% endfor %} <!--this means end the for loop-->
+    </ul>
+{% endblock %} 
