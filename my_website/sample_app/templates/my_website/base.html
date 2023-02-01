@@ -1,14 +1,17 @@
 <html>
-    <head> 
-        
-        <title>{% block title %}Renzo's Website{% endblock %}</title>
-    </head>
 
-    <body>
-        <div id="content", name="content">
-        <!--Create a content block to override other templates-->
-            {% block content %}
-            {% endblock %}
-        </div>
-    </body>
+<head>
+
+    <title>{% block title %}Renzo's Website{% endblock %}</title>
+</head>
+
+<body>
+    <!--Create a content block to override other templates-->
+    <div id="content" , name="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+
 </html>
